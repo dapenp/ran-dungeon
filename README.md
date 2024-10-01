@@ -1,20 +1,2 @@
 # ran-dungeon
-# dapenop poop
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-№
