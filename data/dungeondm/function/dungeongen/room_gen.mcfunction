@@ -21,10 +21,10 @@ execute as @e[type=shulker,tag=hallwest] at @s run place template dungeondm:test
 
 execute as @e[type=shulker,tag=hallwest] at @s run summon shulker ~-8 ~ ~ {NoGravity:1b,NoAI:1b,AttachFace:0b,Tags:["west"]}
 
-execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 1 run place template dungeondm:testroom ~1 ~1 ~3 counterclockwise_90
-execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 2 run place template dungeondm:testroom1 ~1 ~1 ~3 counterclockwise_90
-execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 3 run place template dungeondm:testroom2 ~1 ~1 ~3 counterclockwise_90
-execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 4 run place template dungeondm:testroom3 ~1 ~1 ~3 counterclockwise_90
+execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 1 run place template dungeondm:testroom ~ ~1 ~3 counterclockwise_90
+execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 2 run place template dungeondm:testroom1 ~ ~1 ~3 counterclockwise_90
+execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 3 run place template dungeondm:testroom2 ~ ~1 ~3 counterclockwise_90
+execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] if score testroom_rng_virtual testroomrng matches 4 run place template dungeondm:testroom3 ~ ~1 ~3 counterclockwise_90
 #execute as @e[type=shulker,tag=west] at @s unless entity @e[type=shulker,tag=hallwest,distance=..6] at @s run place template dungeondm:testroom ~1 ~1 ~3 counterclockwise_90
 
 execute as @e[type=shulker,tag=west] at @s run kill @s
