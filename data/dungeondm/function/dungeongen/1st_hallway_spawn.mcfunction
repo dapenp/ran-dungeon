@@ -6,7 +6,14 @@ execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"mine
 execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[-90.0f]} at @s run summon shulker ~-5 ~-2 ~ {NoGravity:1b,NoAI:1b,AttachFace:0b,Tags:["west"]}
 execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[90.0f]} at @s run summon shulker ~5 ~-2 ~ {NoGravity:1b,NoAI:1b,AttachFace:0b,Tags:["east"]}
 execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[180.0f]} at @s run summon shulker ~ ~-2 ~5 {NoGravity:1b,NoAI:1b,AttachFace:0b,Tags:["south"]}
-
+                               #===========
+                               #door remove
+                               #===========
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[0.0f]} unless data entity @s {Rotation:[90.0f]} unless data entity @s {Rotation:[-90.0f]} unless data entity @s {Rotation:[270.0f]} unless data entity @s {Rotation:[180.0f]} at @s run fill ~1 ~ ~-1 ~-1 ~2 ~-1 air
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[270.0f]} at @s run fill ~-1 ~ ~1 ~-1 ~2 ~-1 air
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[-90.0f]} at @s run fill ~-1 ~ ~1 ~-1 ~2 ~-1 air
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[90.0f]} at @s run fill ~1 ~ ~1 ~1 ~2 ~-1 air
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[180.0f]} at @s run fill ~1 ~ ~1 ~-1 ~2 ~-1 air
                                #==========
                                #tag remove
                                #==========
