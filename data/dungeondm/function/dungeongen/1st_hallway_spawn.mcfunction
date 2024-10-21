@@ -18,11 +18,11 @@ execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"mine
                                #==========
                                #tag remove
                                #==========
-execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[0.0f]} at @s run tag @s remove lock
-execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[270.0f]} at @s run tag @s remove lock
-execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[-90.0f]} at @s run tag @s remove lock
-execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[90.0f]} at @s run tag @s remove lock
-execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[180.0f]} at @s run tag @s remove lock
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[0.0f]} unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] at @s run tag @s remove lock
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[270.0f]} unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] at @s run tag @s remove lock
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[-90.0f]} unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] at @s run tag @s remove lock
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[90.0f]} unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] at @s run tag @s remove lock
+execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[180.0f]} unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] at @s run tag @s remove lock
 
                                #===============
                                #room generation
