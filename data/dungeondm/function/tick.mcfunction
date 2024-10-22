@@ -11,3 +11,7 @@ execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[180.0f]} a
 execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[90.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=11,dz=0] run kill @s
 execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[-90.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=-11,dz=0] run kill @s
 execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[270.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=-11,dz=0] run kill @s
+
+execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..3] unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] run data merge entity @s {ShowArms:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_helmet",Count:1b}]}
+execute as @e[type=armor_stand,tag=lock] at @s unless entity @p[distance=..3] run data merge entity @s {ShowArms:0b,ArmorItems:[{},{},{},{id:"minecraft:iron_helmet",Count:1b}]}
+execute as @e[type=armor_stand,tag=lock] at @s if entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..3] run data merge entity @s {ShowArms:0b,ArmorItems:[{},{},{},{id:"minecraft:iron_helmet",Count:1b}]}
