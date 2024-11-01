@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+    "template": {
+      "item": "minecraft:barrier"
+    },
+    "base": {
+      "item": "minecraft:chainmail_chestplate"
+    },
+    "addition": {
+      "item": "minecraft:iron_ingot"
+    },
+    "result": {
+      "id": "minecraft:iron_chestplate"
+    }
+  }
+  
