@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:barrier"
+  },
+  "base": {
+    "item": "minecraft:leather_helmet"
+  },
+  "addition": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "minecraft:chainmail_helmet",
+    "components": {
+      "minecraft:max_damage": 90
+    }
+  }
+}
+
+
+  

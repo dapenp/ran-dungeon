@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:barrier"
+  },
+  "base": {
+    "item": "minecraft:leather_leggings"
+  },
+  "addition": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "minecraft:chainmail_leggings",
+    "components": {
+      "minecraft:max_damage": 175
+    }
+  }
+}
+
+  
