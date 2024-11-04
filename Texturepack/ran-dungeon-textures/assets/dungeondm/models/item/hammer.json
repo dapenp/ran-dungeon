@@ -1,0 +1,14 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "dungeondm:item/hammer"
+	},
+	"display": {
+		"fixed": {
+			"rotation": [0, 0, -26.5],
+			"translation": [0, -7.75, 0],
+			"scale": [2, 2, 1]
+		}
+	}
+}

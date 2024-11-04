@@ -1,0 +1,9 @@
+{
+    "sources": [
+      {
+        "type": "directory",
+        "source": "dungeondm:textures/item",
+        "prefix": "dungeondm:item/"
+      }
+    ]
+  }

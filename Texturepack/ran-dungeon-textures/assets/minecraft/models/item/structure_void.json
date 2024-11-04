@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/structure_void"
+  },
+  "overrides":
+  [
+    { "predicate": {"custom_model_data":697001}, "model": "dungeondm:item/iron_item_trim_smithing_template" }
+
+  ]
+}

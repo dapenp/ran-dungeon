@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/emerald"
+  },
+  "overrides":
+  [
+    { "predicate": {"custom_model_data":697001}, "model": "dungeondm:locks/lock_close_lv0" },
+    { "predicate": {"custom_model_data":697002}, "model": "dungeondm:locks/lock_active_lv0" },
+    { "predicate": {"custom_model_data":697003}, "model": "dungeondm:item/chisel" },
+    { "predicate": {"custom_model_data":697004}, "model": "dungeondm:item/hammer" },
+    { "predicate": {"custom_model_data":697005}, "model": "dungeondm:item/saw" },
+    { "predicate": {"custom_model_data":697006}, "model": "dungeondm:item/saw2" },
+    { "predicate": {"custom_model_data":697007}, "model": "dungeondm:item/shears" }
+  ]
+}
+

@@ -1,0 +1,13 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "dungeondm:item/saw"
+	},
+	"display": {
+		"fixed": {
+			"translation": [-11.75, -10.75, -16],
+			"scale": [2, 2, 2]
+		}
+	}
+}
