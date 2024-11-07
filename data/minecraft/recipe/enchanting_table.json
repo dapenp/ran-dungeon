@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " B ",
+      "CAC",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:obsidian"
+      },
+      "B": {
+        "item": "minecraft:chain_command_block"
+    },
+      "C": {
+       "item": "minecraft:jigsaw"
+    }
+    },
+    "result": {
+      "id": "minecraft:enchanting_table"
+    }
+  }
