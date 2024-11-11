@@ -33,6 +33,6 @@ execute as @e[type=armor_stand,tag=lock] at @s if entity @e[type=!armor_stand,ta
                                               #======
 execute as @a at @s if entity @e[type=marker,tag=trap,distance=..0.5] run function dungeondm:traps/spike_trap_active
 #execute as @a at @s unless entity @e[type=marker,tag=trap,distance=..0.5] run function dungeondm:traps/spike_trap_deactive
-execute as @a at @s if entity @e[type=marker,tag=trap,distance=1fix] run function dungeondm:traps/spike_trap_deactive
+execute as @a at @s if entity @e[type=marker,tag=trap,distance=1] run function dungeondm:traps/spike_trap_deactive
 
                                             
