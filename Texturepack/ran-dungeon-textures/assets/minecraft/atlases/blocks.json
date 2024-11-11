@@ -4,6 +4,11 @@
         "type": "directory",
         "source": "dungeondm:textures/item",
         "prefix": "dungeondm:item/"
+      },
+      {
+        "type": "directory",
+        "source": "dungeondm:textures/block",
+        "prefix": "dungeondm:block/"
       }
     ]
   }

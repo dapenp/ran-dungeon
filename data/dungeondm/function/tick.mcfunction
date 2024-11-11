@@ -28,3 +28,11 @@ execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] unless
 execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] unless entity @s[tag=lock_active] run tag @s add lock_active
 execute as @e[type=armor_stand,tag=lock] at @s if entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] run data merge entity @s {ShowArms:0b,ArmorItems:[{},{},{},{id:"minecraft:emerald",count:1,components:{"minecraft:custom_model_data":697002}}]}
 
+                                              #======
+                                              # Trap
+                                              #======
+execute as @a at @s if entity @e[type=marker,tag=trap,distance=..0.5] run function dungeondm:traps/spike_trap_active
+#execute as @a at @s unless entity @e[type=marker,tag=trap,distance=..0.5] run function dungeondm:traps/spike_trap_deactive
+execute as @a at @s if entity @e[type=marker,tag=trap,distance=0.6..] run function dungeondm:traps/spike_trap_deactive
+
+                                            
