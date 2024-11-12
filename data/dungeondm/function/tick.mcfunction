@@ -36,3 +36,5 @@ execute as @a at @s if entity @e[type=marker,tag=trap,distance=..0.5] run functi
 execute as @a at @s if entity @e[type=marker,tag=trap,distance=..1,limit=1] run function dungeondm:traps/spike_trap_deactive
 
                                             
+
+                                            
