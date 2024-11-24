@@ -12,7 +12,9 @@
     { "predicate": {"custom_model_data":697005}, "model": "dungeondm:item/saw" },
     { "predicate": {"custom_model_data":697006}, "model": "dungeondm:item/saw2" },
     { "predicate": {"custom_model_data":697007}, "model": "dungeondm:item/shears" },
-    { "predicate": {"custom_model_data":697008}, "model": "dungeondm:block/spike" }
+    { "predicate": {"custom_model_data":697008}, "model": "dungeondm:block/spike" },
+    { "predicate": {"custom_model_data":697009}, "model": "dungeondm:block/portal_buttom" },
+    { "predicate": {"custom_model_data":697010}, "model": "dungeondm:block/portal_top" }
   ]
 }
 

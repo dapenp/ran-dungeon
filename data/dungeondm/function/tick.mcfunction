@@ -35,4 +35,7 @@ execute as @a at @s if entity @e[type=marker,tag=trap,distance=..0.5] run functi
 #execute as @a at @s unless entity @e[type=marker,tag=trap,distance=..0.5] run function dungeondm:traps/spike_trap_deactive
 execute as @a at @s if entity @e[type=marker,tag=trap,distance=..1,limit=1] run function dungeondm:traps/spike_trap_deactive
 
-                                            
+execute as @e[tag=portal_room] at @s if entity @p[distance=..5] run function dungeondm:traps/portal_active
+execute as @e[type=marker,tag=room_portal_entrance] at @s if entity @p[distance=..5] run function dungeondm:traps/portal_damage
+
+                                           

@@ -1,4 +1,6 @@
 {
+    "item.dungeondm.iron_upgrade":"Залізне Покращення",
     "item.dungeondm.chainmail": "Кольчуга",
-    "item.dungeondm.brilliant": "Брильянт"
+    "item.dungeondm.brilliant": "Брильянт",
+    "block.minecraft.chain_command_block": "Енциклопедія Зачарувань"
 }
