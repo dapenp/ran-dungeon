@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "minecraft:barrier"
-  },
   "base": {
-    "item": "minecraft:leather_chestplate"
+    "item": "minecraft:leather_boots"
   },
   "addition": {
     "item": "minecraft:amethyst_shard"
+  },
+  "template": {
+    "item": "minecraft:music_disc_cat"
   },
   "result": {
     "id": "minecraft:chainmail_chestplate",
@@ -16,5 +16,4 @@
     }
   }
 }
-
   
