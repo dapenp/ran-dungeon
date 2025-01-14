@@ -6,27 +6,7 @@ execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"mine
 #execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[89.9f]} at @s run function dungeondm:dungeongen/1st_hallway_spawn
 #execute as @e[type=armor_stand,tag=lock] if data entity @s {HandItems:[{id:"minecraft:trial_key"}],Rotation:[179.9f]} at @s run function dungeondm:dungeongen/1st_hallway_spawn
 
-execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[0.0f]} unless data entity @s {Rotation:[180.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=0,dz=-11] run kill @s
-execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[180.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=0,dz=11] run kill @s
-execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[90.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=11,dz=0] run kill @s
-execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[-90.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=-11,dz=0] run kill @s
-execute as @e[type=armor_stand,tag=lock] if data entity @s {Rotation:[270.0f]} at @s if entity @e[type=shulker,tag=block,distance=..11,dx=-11,dz=0] run kill @s
-
-                                              #============
-                                              # Lock state
-                                              #============
-#deactive                                              
-execute as @e[type=armor_stand,tag=lock] at @s unless entity @p[distance=..2] run data merge entity @s {ShowArms:0b,ArmorItems:[{},{},{},{id:"minecraft:emerald",count:1,components:{"minecraft:custom_model_data":697001}}]}
-execute as @e[type=armor_stand,tag=lock] at @s unless entity @p[distance=..2] at @s run tag @s remove lock_active
-execute as @e[type=armor_stand,tag=lock] at @s unless entity @p[distance=..2] unless entity @s[tag=played_vault_sound] run playsound minecraft:block.vault.deactivate ambient @a[distance=..10] ~ ~ ~ 1 1 1
-execute as @e[type=armor_stand,tag=lock] at @s unless entity @p[distance=..2] unless entity @s[tag=played_vault_sound] run tag @s add played_vault_sound
-execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] run tag @s remove played_vault_sound
-#active
-execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] run data merge entity @s {ShowArms:1b,ArmorItems:[{},{},{},{id:"minecraft:emerald",count:1,components:{"minecraft:custom_model_data":697002}}]}
-execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] unless entity @s[tag=lock_active] run playsound minecraft:block.vault.activate ambient @a[distance=..10] ~ ~ ~ 1 1 1
-#mob deactive
-execute as @e[type=armor_stand,tag=lock] at @s if entity @p[distance=..2] unless entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] unless entity @s[tag=lock_active] run tag @s add lock_active
-execute as @e[type=armor_stand,tag=lock] at @s if entity @e[type=!armor_stand,tag=gatekeeper_mob,distance=..5] run data merge entity @s {ShowArms:0b,ArmorItems:[{},{},{},{id:"minecraft:emerald",count:1,components:{"minecraft:custom_model_data":697002}}]}
+execute if entity @e[type=armor_stand,nbt={Invisible:1b}] run function dungeondm:tags/tags
 
                                               #======
                                               # Trap
@@ -38,4 +18,13 @@ execute as @a at @s if entity @e[type=marker,tag=trap,distance=..1,limit=1] run 
 execute as @e[tag=portal_room] at @s if entity @p[distance=..5] run function dungeondm:traps/portal_active
 execute as @e[type=marker,tag=room_portal_entrance] at @s if entity @p[distance=..5] run function dungeondm:traps/portal_damage
 
-                                           
+
+execute as @e[tag=trigger] run function dungeondm:tags/tags
+
+                                              #===============
+                                              # Portal Spawner
+                                              #===============
+execute as @a[tag=spawner] unless entity @e[tag=portal_mob,distance=..10] at @s run scoreboard players set @s wave_triggered 0
+execute as @a[scores={portal_active=1, wave_in_progress=0}] run function dungeondm:spawners/portal_start_wave
+#execute as @a[scores={portal_active=1, wave_in_progress=0}] run scoreboard players set @s wave_in_progress 1
+execute as @a[scores={portal_progress=..0}] run function dungeondm:spawners/portal_end_trial
