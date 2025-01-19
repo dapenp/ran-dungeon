@@ -9,6 +9,16 @@
         "type": "directory",
         "source": "dungeondm:textures/block",
         "prefix": "dungeondm:block/"
+      },
+      {
+        "type": "directory",
+        "source": "dungeondm:textures/entity",
+        "prefix": "dungeondm:entity/"
+      },
+      {
+        "type": "directory",
+        "source": "dungeondm:textures/armor",
+        "prefix": "dungeondm:armor/"
       }
     ]
   }

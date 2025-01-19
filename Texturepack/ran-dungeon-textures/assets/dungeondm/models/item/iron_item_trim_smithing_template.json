@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/generated",
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "dungeondm:item/iron_item_trim_smithing_template"
 	}
