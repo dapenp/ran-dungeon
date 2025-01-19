@@ -1,19 +1,13 @@
 {
-"type": "minecraft:smithing_transform",
- "template": {
-   "item": "minecraft:structure_block"
-  },
-  "base": {
-    "item": "minecraft:diamond"
-  },
-  "addition": {
-    "item": "blaze_powder"
-  },
- "result": {
+  "type": "minecraft:smithing_transform",
+  "template": "structure_block",
+  "base": "minecraft:diamond",
+  "addition": "blaze_powder",
+  "result": {
     "id": "minecraft:heart_of_the_sea",
-   "components": {
-     "minecraft:custom_model_data": 697001,
-     "minecraft:item_name": "{\"color\":\"white\",\"translate\":\"item.dungeondm.brilliant\"}"
-      }
+    "components": {
+      "minecraft:item_name": "{\"color\":\"white\",\"translate\":\"item.dungeondm.brilliant\"}",
+      "minecraft:item_model": "dungeondm:brilliant"
     }
   }
+}
